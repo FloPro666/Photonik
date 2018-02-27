@@ -1,27 +1,129 @@
-\documentclass[8pt]{scrartcl}
-\usepackage[left=1cm,right=1cm,top=1cm,bottom=1cm]{geometry}
+\documentclass[12pt,a4paper,oneside]{article}
+% -----------------------------------------------------------------------------------------
 \usepackage[utf8]{inputenc}
-\usepackage[ngerman]{babel}
-\usepackage{multicol}
-\usepackage{amsmath}
+\usepackage[centertags]{amsmath}
 \usepackage{amsfonts}
 \usepackage{amssymb}
-\usepackage{gensymb}
-\usepackage{dsfont}
-\usepackage{calc}
-\usepackage[permil]{overpic} \usepackage{graphicx} \graphicspath{{gfx/}}
-\author{Florian Probst}
-\title{Formelsammlung Photonik}
+\usepackage{amsthm}
+\usepackage{newlfont}
+\usepackage{amsxtra}
+\usepackage{amstext}
+\usepackage{latexsym}
+\usepackage[ngerman]{babel}
+\usepackage[top=2cm,bottom=2cm,left=2cm,right=2cm]{geometry}
+\usepackage{pifont}
+\usepackage{ulem}
+\usepackage{color}
+\usepackage{marvosym}
+\usepackage[T1]{fontenc}
+\usepackage{amsfonts}
+\usepackage{graphicx}
+\usepackage{array}
+\usepackage{booktabs}
+\usepackage{dcolumn}
+\usepackage{units}
+\usepackage{rotating}
+\usepackage{hyperref}
+\usepackage{floatflt}
+%\usepackage{makeidx}
+\usepackage{fancyhdr}
+\usepackage{totpages}
+\usepackage{amsmath}
+\usepackage{framed}
+\usepackage{multicol}
+\usepackage{lmodern}
+
+\usepackage{mathtools}
+% -----------------------------------------------------------------------------------------
 \begin{document}
-	\begin{section}{Optik Allgemein}
-		\textbf{Wellenlänge} $\lambda=\frac{c_0}{f\, n} = \frac{\lambda_0}{n}\quad[m]$\\[.2cm]
-		\textbf{Feldwellenwiderstand} $Z_F=\frac{|E|}{|H|}=\sqrt{\frac{\mu_0 \, \mu_r}{\epsilon_0 \, \epsilon_r}}= Z_0 \, \sqrt{\frac{\mu_r}{\epsilon_r}} \qquad[\Omega]$\\[.2cm]
-		\textbf{Im Medium} $Z_F = \frac{Z_0}{n}$\\[.2cm]
-		\textbf{Poynting-Vektor} $\vec{S}=\vec{E}\times\vec{H}$, $|\vec{S}|=\frac{1}{2}|\vec{E}|\,|\vec{H}|=\frac{|\vec{E}|^2}{2\,Z_F}=I\quad [\frac{W}{m^2}]$\\[.2cm]
-		\textbf{Leistung} $P= A\, |\vec{S}|\quad [W]$ \\[.2cm]
-		\textbf{Photonenenergie} $$W_{Phot}= h\,f=h\, \frac{c_0}{\lambda_0}\quad [W]$$\\[.2cm]
-		Photonenflussdichte $\Phi_{Phot}=\frac{N_{Phot}}{dt\,dA}$ \\
-		test test test
-		
-	\end{section}
-\end{document}
+	% -----------------------------------------------------------------------------------------
+	%	 Titel
+	% -----------------------------------------------------------------------------------------
+	%\headheight0cm\headsep0cm\topskip0cm\footskip0cm
+	\pagestyle{fancy} %eigener Seitenstil
+	\fancyhf{} %alle Kopf- und Fußzeilenfelder bereinigen
+	\fancyhead[L]{Formelsammlung Photonik} %Kopfzeile links
+	\fancyhead[C]{FS PHO} %zentrierte Kopfzeile
+	\fancyhead[R]{Seite \thepage/\ref{TotPages}} %Kopfzeile rechts
+	\renewcommand{\headrulewidth}{0.1mm} %obere Trennlinie
+	\headheight1cm
+	
+	\textheight25cm
+	\setlength{\parindent}{0em}
+	%\fancyfoot[C]{\thepage} %Seitennummer
+	%\renewcommand{\footrulewidth}{0.4pt} %untere Trennlinie
+	
+	\DeclarePairedDelimiter{\abs}{\lvert}{\rvert}
+	
+	\setlength{\abovedisplayskip}{7pt}
+	\setlength{\belowdisplayskip}{7pt}
+	~
+	\begin{center}
+		\vspace{-1.0cm}
+		{\Large \textbf{Formelsammlung Photonik}}
+	\end{center}
+	% -----------------------------------------------------------------------------------------
+	%	Hauptext
+	% -----------------------------------------------------------------------------------------
+	\setlength{\columnseprule}{0.1mm}
+	\begin{multicols}{3}
+		\textbf{Wellenlänge} $$\lambda=\frac{c_0}{f\, n} = \frac{\lambda_0}{n}\quad[m]$$
+		\textbf{Wellenzahl} $$\nu = \frac{1}{\lambda_0}$$
+		\textbf{Feldwellenwiderstand} $$Z_F=\frac{|E|}{|H|}=\sqrt{\frac{\mu_0 \, \mu_r}{\epsilon_0 \, \epsilon_r}}$$ $$= Z_0 \, \sqrt{\frac{\mu_r}{\epsilon_r}} \qquad[\Omega]$$
+		\textbf{Im Medium} $$Z_F = \frac{Z_0}{n}$$
+		\textbf{Poynting-Vektor} $$\vec{S}=\vec{E}\times\vec{H}$$ $$|\vec{S}|=\frac{1}{2}|\vec{E}|\,|\vec{H}|$$$$=\frac{|\vec{E}|^2}{2\,Z_F}=I\quad [\frac{W}{m^2}]$$
+		\textbf{Leistung} $$P= A\, |\vec{S}|\quad [W]$$
+		\textbf{Photonenenergie} $$W_{Phot}= h\,f=h\, \frac{c_0}{\lambda_0}\quad [J]$$
+		\textbf{Photonenflussdichte} $$\Phi_{Phot}=\frac{N_{Phot}}{dt\,dA}$$ $$ = \frac{I}{W_{Phot}} \quad [\frac{1}{m^2\, s}]$$ 
+		\textbf{Photonenfluss} $$F_{Phot} = \frac{N_{Phot }}{dt}= \Phi_{Phot} \, A \quad [\frac{1}{s}]	$$
+ 	\textbf{Snelluissches Brechungsgesetz}$$n_1 \, \sin(\alpha_1) = n_2 \sin(\alpha_2)$$\begin{tiny}
+		$n_1$ einfallender, $n_2$ transmittierter Strahl
+	\end{tiny}
+	\textbf{Fresnelsches Brechungsgesetz }$$n = \frac{n_2 }{n_1}$$\textbf{Senkrechte Polarisation}$$R_s(\alpha, n)$$ $$= \bigg[\frac{\sqrt{n^2 - \sin^2(\alpha)}-\cos{\alpha}}{\sqrt{n^2 - \sin^2(\alpha)}+cos{\alpha}}\bigg]^2$$ $$T_s(\alpha, n) = 1- R_s(\alpha, n)$$
+	\textbf{Parallele Polarisation} $$R_p(\alpha, n) $$ $$= \bigg[\frac{n \cos(\alpha)-\sqrt{1-(\frac{\sin(\alpha)}{n})^2}}{n \cos(\alpha)+\sqrt{1-(\frac{\sin(\alpha)}{n}})^2}\bigg]^2$$ $$T_p(\alpha, n) = 1 - R_p(\alpha, n)$$
+	\textbf{Senkrechter Einfall}
+	$$R = \big( \frac{n_1 - n_2}{n_1 + n_2}\big)^2 = \big( \frac{1- n }{1 + n}\big)^2$$
+	\textbf{Totalreflexion} \begin{tiny}\\nur bei dicht $\rightarrow$ duenn
+	\end{tiny}$$ \alpha_T = \sin^{-1}(\frac{n_2}{n_1})$$
+	\textbf{Brewster-Winkel }\begin{tiny}\\Refl. par. Komp. wird 0, beide Richtungen, \\ 90 Grad zw. Refl. u. Trans.
+	\end{tiny}$$\alpha_B = \tan^{-1}(\frac{n_2}{n_1})$$
+\textbf{Jones-Vektoren}
+$$\vec{J}=\frac{1}{\sqrt{|\hat{E}|^2_x+|\hat{E}^2_y|}} \begin{pmatrix}
+\hat{E}_x \\ \hat{E}_y
+\end{pmatrix}$$
+$$\vec{J}_{h, \alpha}  = \begin{pmatrix}
+\cos(\alpha) \\ \sin(\alpha)
+\end{pmatrix} $$ 
+\begin{tiny} $\alpha$ Winkel z. x-Achse
+\end{tiny}
+\\Vertikaler Linearpolarisator $$ J_v = \begin{pmatrix}
+0  & 0 \\ 0 & 1
+\end{pmatrix}$$
+\\Horizontaler Linearpolarisator $$ J_v = \begin{pmatrix}
+1  & 0 \\ 0 & 0
+\end{pmatrix}$$
+$$\vec{J}_{nachher}= J_x \cdot \vec{J}_{vorher}$$
+Normierte Leistung $$ P \sim |\vec{J}|^2$$
+\textbf{AR-Spiegel}\\
+Beschichtungsmaterial
+$$n_{AR}= \sqrt{n_1 n_2} $$
+Dicke $$d_{AR}= \frac{\lambda_{AR}}{4}= \frac{\lambda_0}{4 n_{AR}}$$
+\textbf{Vibrationsenergie} $$W_{vib}=h f_{vib} (\nu + \frac{1}{2}) \quad [J, eV]$$\begin{tiny}$\nu = 0, 1, 2... $, aequidistant\\
+\end{tiny} 
+\textbf{Rotationsenergie} $$W_{rot}= B J (J+1)\quad [J, eV]$$ \begin{tiny}$J=0,1,2...$, nicht aequidistant \\B: Molekuelspez. Konst.\\
+\end{tiny}
+\textbf{Besetzungsdichte} $$N_\nu = \frac{Anzahl \mu S}{Volumen} \quad [\frac{1}{cm^3}]$$
+\textbf{Gesamtbesetzungsdichte} $$N_g = \sum_\nu N_nu$$\\
+\textbf{Boltzmann-Verteilung }$$\frac{N_\nu}{N_\mu}=e^{-(\frac{W_\nu-W_\mu}{kT})}$$
+\textbf{Absolutwerte} \begin{tiny}\\Mit $W_1 = 0$
+\end{tiny}$$N_\nu = N_g \frac{e^{-(\frac{W_\nu}{kT})}}{ \sum_{i=1}^{\infty} e^{-(\frac{W_i}{kT})}}$$ $$ =N_g \frac{e^{-(\frac{W_\nu}{kT})}}{ Q(T)} \quad [\frac{1}{cm^3}]$$
+\textbf{Zustandssumme} $$Q(T) = \sum_{i=1}^{\infty} e^{-(\frac{W_i}{kT})} $$
+\textbf{Quantenwirkungsgrad} $$\nu_q = \frac{W_{LaserPhot}}{W_{PumpPhot}}$$
+\textbf{Leistungskleinsignalverstaerkung} $$g_{KS}=\sigma(N_2-N_1)\quad[\frac{1}{m}]$$
+\textbf{Wechselwirkungsquerschnitt} $$\sigma= \frac{\lambda_L^2}{8 \pi \tau_2}\gamma(f)$$\begin{tiny}$\gamma(f)$: Linienprofilfkt. Form d. Verbreiterung geg.\\
+\end{tiny}
+
+
+
+\end{multicols}
+\end{document} 
