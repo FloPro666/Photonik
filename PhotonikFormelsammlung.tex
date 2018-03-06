@@ -66,26 +66,27 @@
 	%	Hauptext
 	% -----------------------------------------------------------------------------------------
 	\setlength{\columnseprule}{0.1mm}
-	\begin{multicols}{3}
+	\subsection*{Optik}
+	\begin{multicols}{2}
 		\textbf{Wellenlänge} $$\lambda=\frac{c_0}{f\, n} = \frac{\lambda_0}{n}\quad[m]$$
 		\textbf{Wellenzahl} $$\nu = \frac{1}{\lambda_0}$$
-		\textbf{Feldwellenwiderstand} $$Z_F=\frac{|E|}{|H|}=\sqrt{\frac{\mu_0 \, \mu_r}{\epsilon_0 \, \epsilon_r}}$$ $$= Z_0 \, \sqrt{\frac{\mu_r}{\epsilon_r}} \qquad[\Omega]$$
+		\textbf{Feldwellenwiderstand} $$Z_F=\frac{|E|}{|H|}=\sqrt{\frac{\mu_0 \, \mu_r}{\epsilon_0 \, \epsilon_r}}= Z_0 \, \sqrt{\frac{\mu_r}{\epsilon_r}} \qquad[\Omega]$$
 		\textbf{Im Medium} $$Z_F = \frac{Z_0}{n}$$
-		\textbf{Poynting-Vektor} $$\vec{S}=\vec{E}\times\vec{H}$$ $$|\vec{S}|=\frac{1}{2}|\vec{E}|\,|\vec{H}|$$$$=\frac{|\vec{E}|^2}{2\,Z_F}=I\quad [\frac{W}{m^2}]$$
+		\textbf{Poynting-Vektor} $$\vec{S}=\vec{E}\times\vec{H}$$ $$|\vec{S}|=\frac{1}{2}|\vec{E}|\,|\vec{H}|=\frac{|\vec{E}|^2}{2\,Z_F}=I\quad [\frac{W}{m^2}]$$
 		\textbf{Leistung} $$P= A\, |\vec{S}|\quad [W]$$
 		\textbf{Photonenenergie} $$W_{Phot}= h\,f=h\, \frac{c_0}{\lambda_0}\quad [J]$$
-		\textbf{Photonenflussdichte} $$\Phi_{Phot}=\frac{N_{Phot}}{dt\,dA}$$ $$ = \frac{I}{W_{Phot}} \quad [\frac{1}{m^2\, s}]$$ 
+		\textbf{Photonenflussdichte} $$\Phi_{Phot}=\frac{N_{Phot}}{dt\,dA} = \frac{I}{W_{Phot}} \quad [\frac{1}{m^2\, s}]$$ 
 		\textbf{Photonenfluss} $$F_{Phot} = \frac{N_{Phot }}{dt}= \Phi_{Phot} \, A \quad [\frac{1}{s}]	$$
  	\textbf{Snelluissches Brechungsgesetz}$$n_1 \, \sin(\alpha_1) = n_2 \sin(\alpha_2)$$\begin{tiny}
 		$n_1$ einfallender, $n_2$ transmittierter Strahl
-	\end{tiny}
-	\textbf{Fresnelsches Brechungsgesetz }$$n = \frac{n_2 }{n_1}$$\textbf{Senkrechte Polarisation}$$R_s(\alpha, n)$$ $$= \bigg[\frac{\sqrt{n^2 - \sin^2(\alpha)}-\cos{\alpha}}{\sqrt{n^2 - \sin^2(\alpha)}+cos{\alpha}}\bigg]^2$$ $$T_s(\alpha, n) = 1- R_s(\alpha, n)$$
-	\textbf{Parallele Polarisation} $$R_p(\alpha, n) $$ $$= \bigg[\frac{n \cos(\alpha)-\sqrt{1-(\frac{\sin(\alpha)}{n})^2}}{n \cos(\alpha)+\sqrt{1-(\frac{\sin(\alpha)}{n}})^2}\bigg]^2$$ $$T_p(\alpha, n) = 1 - R_p(\alpha, n)$$
+	\end{tiny}\\
+	\textbf{Fresnelsches Brechungsgesetz }$$n = \frac{n_2 }{n_1}$$\textbf{Senkrechte Polarisation}$$R_s(\alpha, n)= \bigg[\frac{\sqrt{n^2 - \sin^2(\alpha)}-\cos{\alpha}}{\sqrt{n^2 - \sin^2(\alpha)}+cos{\alpha}}\bigg]^2$$ $$T_s(\alpha, n) = 1- R_s(\alpha, n)$$
+	\textbf{Parallele Polarisation} $$R_p(\alpha, n) = \bigg[\frac{n \cos(\alpha)-\sqrt{1-(\frac{\sin(\alpha)}{n})^2}}{n \cos(\alpha)+\sqrt{1-(\frac{\sin(\alpha)}{n}})^2}\bigg]^2$$ $$T_p(\alpha, n) = 1 - R_p(\alpha, n)$$
 	\textbf{Senkrechter Einfall}
 	$$R = \big( \frac{n_1 - n_2}{n_1 + n_2}\big)^2 = \big( \frac{1- n }{1 + n}\big)^2$$
-	\textbf{Totalreflexion} \begin{tiny}\\nur bei dicht $\rightarrow$ duenn
+	\textbf{Totalreflexion} \begin{tiny}\\nur bei dicht $\rightarrow$ dünn
 	\end{tiny}$$ \alpha_T = \sin^{-1}(\frac{n_2}{n_1})$$
-	\textbf{Brewster-Winkel }\begin{tiny}\\Refl. par. Komp. wird 0, beide Richtungen, \\ 90 Grad zw. Refl. u. Trans.
+	\textbf{Brewster-Winkel }\begin{tiny}\\Reflektierte parallele Komponente wird 0, beide Richtungen, \\ 90 Grad zw. reflektierter u. transmittierter
 	\end{tiny}$$\alpha_B = \tan^{-1}(\frac{n_2}{n_1})$$
 \textbf{Jones-Vektoren}
 $$\vec{J}=\frac{1}{\sqrt{|\hat{E}|^2_x+|\hat{E}^2_y|}} \begin{pmatrix}
@@ -108,22 +109,83 @@ Normierte Leistung $$ P \sim |\vec{J}|^2$$
 Beschichtungsmaterial
 $$n_{AR}= \sqrt{n_1 n_2} $$
 Dicke $$d_{AR}= \frac{\lambda_{AR}}{4}= \frac{\lambda_0}{4 n_{AR}}$$
-\textbf{Vibrationsenergie} $$W_{vib}=h f_{vib} (\nu + \frac{1}{2}) \quad [J, eV]$$\begin{tiny}$\nu = 0, 1, 2... $, aequidistant\\
+\end{multicols}
+\subsection*{Energieniveaus}
+\begin{multicols}{2}
+\textbf{Vibrationsenergie} $$W_{vib}=h f_{vib} (\nu + \frac{1}{2}) \quad [J, eV]$$\begin{tiny}$\nu = 0, 1, 2... $, äquidistant\\
 \end{tiny} 
-\textbf{Rotationsenergie} $$W_{rot}= B J (J+1)\quad [J, eV]$$ \begin{tiny}$J=0,1,2...$, nicht aequidistant \\B: Molekuelspez. Konst.\\
+\textbf{Rotationsenergie} $$W_{rot}= B J (J+1)\quad [J, eV]$$ \begin{tiny}$J=0,1,2...$, nicht äquidistant \\B: Molekülspez. Konstante\\
 \end{tiny}
-\textbf{Besetzungsdichte} $$N_\nu = \frac{Anzahl \mu S}{Volumen} \quad [\frac{1}{cm^3}]$$
+\textbf{Besetzungsdichte} $$N_\nu = \frac{Anzahl \, \mu S}{Volumen} \quad [\frac{1}{cm^3}]$$
 \textbf{Gesamtbesetzungsdichte} $$N_g = \sum_\nu N_nu$$\\
 \textbf{Boltzmann-Verteilung }$$\frac{N_\nu}{N_\mu}=e^{-(\frac{W_\nu-W_\mu}{kT})}$$
 \textbf{Absolutwerte} \begin{tiny}\\Mit $W_1 = 0$
-\end{tiny}$$N_\nu = N_g \frac{e^{-(\frac{W_\nu}{kT})}}{ \sum_{i=1}^{\infty} e^{-(\frac{W_i}{kT})}}$$ $$ =N_g \frac{e^{-(\frac{W_\nu}{kT})}}{ Q(T)} \quad [\frac{1}{cm^3}]$$
+\end{tiny}$$N_\nu = N_g \frac{e^{-(\frac{W_\nu}{kT})}}{ \sum_{i=1}^{\infty} e^{-(\frac{W_i}{kT})}} =N_g \frac{e^{-(\frac{W_\nu}{kT})}}{ Q(T)} \quad [\frac{1}{cm^3}]$$
 \textbf{Zustandssumme} $$Q(T) = \sum_{i=1}^{\infty} e^{-(\frac{W_i}{kT})} $$
 \textbf{Quantenwirkungsgrad} $$\nu_q = \frac{W_{LaserPhot}}{W_{PumpPhot}}$$
-\textbf{Leistungskleinsignalverstaerkung} $$g_{KS}=\sigma(N_2-N_1)\quad[\frac{1}{m}]$$
-\textbf{Wechselwirkungsquerschnitt} $$\sigma= \frac{\lambda_L^2}{8 \pi \tau_2}\gamma(f)$$\begin{tiny}$\gamma(f)$: Linienprofilfkt. Form d. Verbreiterung geg.\\
+\textbf{Leistungskleinsignalverstärkung} $$g_{KS}=\sigma(N_2-N_1)\quad[\frac{1}{m}]$$
+\textbf{Wechselwirkungsquerschnitt} $$\sigma= \frac{\lambda_L^2}{8 \pi \tau_2}\gamma(f)$$\begin{tiny}$\gamma(f)$: Linienprofilfunktion Form durch Verbreiterung gegeben\\
 \end{tiny}
-
-
-
+\textbf{Amplituden / Leistungsbedingung }$$ T R_1 R_2 e^{2 g_{ks} L_a}>1$$
+\textbf{Phasenbedingung} $$f_q = q \frac{c}{2 L_{res}} $$
+\textbf{Abstand Eigenfrequenzen }$$\Delta f_q = \frac{c}{2 L_{res}}$$
+\textbf{Natürliche Linenbreite} $$ \Delta f_{nat} = \frac{1}{2 \pi}(\frac{1}{\tau_1}+ \frac{1}{\tau_2}) $$ $$= \sqrt{\frac{3}{4 m k T}}d^2 p  \quad [Hz]$$
+\textbf{Dopplerverbreiterung} $$\Delta f_{D}=\frac{2 f_0}{c}\sqrt{\frac{2 k T \ln(2)}{m}} \quad [Hz]$$
+\textbf{Gewinn} homogene Verbreiterung $$ g(I, f)=g_{ks}(f) \frac{1}{1 + \frac{I}{I_{sat}}} \quad [\frac{1}{m}]$$
+inhomogene Verbreiterung $$g(I,f)= g_{ks}(f)\frac{1}{\sqrt{1+\frac{I}{I_{sat}}}}$$
+$$g_{sat} = a = \frac{1}{2 L_a} \ln(\frac{1}{R_1 R_2 T})$$
 \end{multicols}
+\subsection*{Gauss-Strahl}
+\begin{multicols}{2}
+TEM$_{00}$ \\
+\textbf{Strahltaille} $$w(z) = w_{min}= w_0 $$ \begin{tiny}Feldstärke auf $\frac{1}{e}$ Intensität auf $\frac{1}{e^2}$\\\end{tiny}
+\textbf{Rayleigh-Länge} $$ z_r = \frac{\pi w_0^2}{\lambda}$$ $$w(z_r) = \sqrt{2} w_0 \quad [m]$$
+\textbf{Strahlradius} $$ w(z)= w_0 \sqrt{1 + (\frac{z}{z_r})^2} $$
+\textbf{Divergenzhalbwinkel} $$\Theta = \arctan(\frac{w_0}{z_r}) $$
+\textbf{Elektrische Feldverteilung }$$ E_{max}(z) = \sqrt{\frac{4 Z_0 P_{ges}}{n \pi w^2(z)}}$$
+\textbf{Intensitätsverteilung} $$I_{max} (z)= \frac{1}{2} n \frac{|E_{max}(z)|^2}{Z_0}=\frac{2 P_{ges}}{\pi w^2(z)}$$
+\textbf{Strahlparameterprodukt} $$SPP_{00} = w_0 \Theta = \frac{\lambda}{\pi} \quad [mm \cdot mrad]$$
+\textbf{Beugungsmaßzahl} $$ M^2 = \frac{SPP_x}{SPP_{00}}$$ \begin{tiny}Umso kleiner desto besser Strahlqualität $M^2(TEM_{10*})=2$\\
+\end{tiny}
+\textbf{Strahlpropagationsfaktor/-qualität }$$K = \frac{1}{M^2}$$
+\textbf{G-Parameter }$$g_{1,2}= 1- \frac{L}{\rho_{1,2}}$$
+\textbf{Stabilitätskriterium} $$0  \leq g_1 g_2 \leq 1 $$
+\textbf{Strahlradius an Spiegel} $$w_1 = \sqrt{\frac{L \lambda}{\pi}\sqrt{\frac{g_2}{g_1(1-g_1 g_2)}}}$$
+\textbf{Ort der Taille }$$|z_1| = \frac{g_2 (1 - g_1)}{g_1 + g_2 - 2 g_1 g_2} L $$
+\textbf{Taillenradius} $$ w_0 = \sqrt{\frac{L \lambda}{\pi}\sqrt{\frac{g_1 g_2 (1-g_1 g_2)}{(g_1 + g_2 - 2 g_1 g_2)}}}$$
+\textbf{Besondere Resonatoren} \\\begin{tiny}
+	Symmetrische R: $ \rho_1 = \rho_2$, $g_1 = g_2$\\
+	Fast ebener R: $\rho >> L, g_1 = g_2 \sim 1 $\\
+	Konfokaler R: $\rho = L, g_1 = g_2 = 0 $\\
+	Konzentrischer R: $\rho = \frac{L}{2}, g_1 = g_2 = -1$\\
+	Plan-konkav R: $\rho_1 = \infty, L \leq \rho_2 < \infty, g_1 = 1, g_2 = 0$\\
+	Hemisphärischer R: $\rho_1 = \infty, \rho_2 \rightarrow L, g_1 = 1, g_2 = 0$\\
+\end{tiny}
+\end{multicols}
+\subsection*{Optische Üebertragunselemente}
+\begin{multicols}{2}
+\textbf{Halbleiterlaser}\\
+\textbf{Bandabstand} $$W  = h f = h \frac{c}{\lambda}$$
+\textbf{Schwellstrom} $I_{th}$ aus Kennlinie\\
+\textbf{Ausgangsleistung} $P_0$ aus Kennlinie\\
+\textbf{Elektrische Leistung} $$P_{el} = U_{op} I_{op}$$
+\textbf{Differenzielle Effizienz}$$ \eta_{slope} = \frac{\partial P_{opt}}{\partial I} \quad [\frac{W}{A}]$$
+\textbf{Technischer Wirkungsgrad} $$\eta = \frac{P_{op}}{P_{el}}$$
+
+\textbf{Lichtwellenleiter} \\
+\textbf{Akzeptanz-Grenzwinkel} $$\Theta_{ic}= \arcsin\frac{1}{n_0}\sqrt{n_k^2-n_M^2}$$
+\textbf{Kritischer Axiale Ausbreitungswinkel }$$\Theta_{z,c}=\arccos\frac{n_m}{n_K}$$
+\textbf{Numerische Apertur }$$NA = \sin \Theta_{ic} = \frac{1}{n_0}\sqrt{n_k^2-n_M^2}$$
+\textbf{Faserparameter} $$V=\frac{2 \pi \rho}{\lambda} NA$$
+\begin{tiny} $\rho$: Faserkernradius, $\lambda$: Freiraumwellenlänge des Lichts \\ $V<2.405 \rightarrow$ Singlemodefaser\end{tiny}\\
+\textbf{Modenanzahl} $$M = \frac{V^2}{2}$$
+\textbf{Photodioden}\\
+\textbf{Spektrale Fotoempfindlichkeit}
+$$I_{Ph} = R_{Rexp} P_{opt} \quad [\frac{A}{W}]$$
+\textbf{Sperrschichtkapazität} $C_s$ sinkt mit Sperrspannung, aus Datenblatt \\
+\textbf{Dunkelstrom} $I_R$ steigt mit Sperrspannung, aus Datenblatt \\
+\textbf{Quantenausbeute} $\eta \quad [\frac{Elektronen}{Photon}]$ aus Datenblatt\\
+\textbf{Berechnung Anstiegszeit} $$t_{10,90} = 2.2 \tau_{RC}$$ \begin{tiny} mit $\tau_{RC} = R_L C_s$\end{tiny} Anstiegszeit < Impulsdaür\\
+
+ \end{multicols}
 \end{document} 
